@@ -1,8 +1,11 @@
 <div>
   <ul>
-    <li>APP Component</li>
+    <li>APP Component : <b>{{appName}}</b></li>
   </ul>
 </div>
 <button type="button" (click)="goToEmployee()">Go To Employee</button>
 <button type="button"(click)="goToEmployeeid()">going to employeeid page</button>
+
+<button type="button"(click)="checkEmployeeName()">Check Emp Name</button>
+
 <router-outlet></router-outlet>
