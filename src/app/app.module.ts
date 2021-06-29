@@ -7,6 +7,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeidComponent } from './employeeid/employeeid.component';
 import { LoginService } from './services/app.service';
 import { EmployeeService } from './services/employee.service';
+import { OutsideURLService } from './services/outsideURL.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { EmployeeService } from './services/employee.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ 
     LoginService,
-    EmployeeService
+    EmployeeService,
+    OutsideURLService
   ],
   bootstrap: [AppComponent]
 })
