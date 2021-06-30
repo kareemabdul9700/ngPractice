@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LoginService } from '../services/app.service';
 import { EmployeeService } from '../services/employee.service';
+import { SohailService } from '../services/sohail.service';
 
 @Component({
   selector: 'app-employee',
@@ -11,8 +12,10 @@ import { EmployeeService } from '../services/employee.service';
 export class EmployeeComponent implements OnInit {
 
   name: string = '';
+  data: any = {};
 
-  constructor(private _ar: ActivatedRoute, private _lsrv: LoginService, private _empsrv: EmployeeService) { 
+  constructor(private _ar: ActivatedRoute, private _lsrv: LoginService, private _empsrv: EmployeeService,
+    private soharilSrv: SohailService) { 
     //console.log("Employee Component: " + this._lsrv.getNameFromService());
     console.log('Employee Instance');
     this.name = this._empsrv.employeeName;
@@ -31,6 +34,15 @@ export class EmployeeComponent implements OnInit {
 
   checkEmployeeName(){
     this._empsrv.checkEmployeeName();
+  }
+
+  getData(){
+    this.soharilSrv.getDataFromOutsideURL(2).subscribe(
+      //successs fn
+      (res) => {  this.data = res; },
+      //error fn
+      (err) => {console.log(err); }
+    )
   }
 
 }

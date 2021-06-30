@@ -9,6 +9,7 @@ import { LoginService } from './services/app.service';
 import { EmployeeService } from './services/employee.service';
 import { OutsideURLService } from './services/outsideURL.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SohailService } from './services/sohail.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [ 
     LoginService,
     EmployeeService,
-    OutsideURLService
+    OutsideURLService,
+    SohailService
   ],
   bootstrap: [AppComponent]
 })
