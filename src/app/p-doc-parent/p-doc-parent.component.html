@@ -1,5 +1,5 @@
 <div style="outline: 1px solid green; margin: 10px; padding: 10px; padding: 10px">
     <h1>I am Parent Component</h1>
     <div>Data from Child is :  <b>{{dataFromChild}}</b> </div>
-    <app-p-doc-child  [dataFromParent]="'India'" (childToParentEvent)="takeData($event)"></app-p-doc-child>
+    <app-p-doc-child  [dataFromParent]="dataFromChild" (childToParentEvent)="takeData($event)"></app-p-doc-child>
 </div>

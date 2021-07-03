@@ -9,15 +9,16 @@ export class PDocParentComponent implements OnInit {
 
 
   parentData: string = 'data from parent';
-  dataFromChild: string = '';
+  dataFromChild: string = 'india';
+  count: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  takeData(valFromChild: string){
-    this.dataFromChild = valFromChild;
+  takeData(valFromChild: number){
+    this.count = valFromChild;
   }
 
 }

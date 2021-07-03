@@ -9,7 +9,7 @@ export class PDocChildComponent implements OnInit {
 
   capital: string = '';
 
-  @Input() 
+  @Input("dataFromParent") //Attriute
   set dataFromParent(val: string) {
     if(val.toString().toLowerCase() == 'germany')   
       this.capital = 'Berlin';
@@ -17,7 +17,8 @@ export class PDocChildComponent implements OnInit {
       this.capital = 'Delhi';
   }
 
-  @Output() childToParentEvent = new EventEmitter<string>();
+  @Output() 
+  childToParentEvent = new EventEmitter<number>();
 
   constructor() { }
 
@@ -25,7 +26,7 @@ export class PDocChildComponent implements OnInit {
   }
 
   sendDataFromChildToParent(){
-    this.childToParentEvent.emit("data from child to parent");
+    this.childToParentEvent.emit(100);
   }
 
 }

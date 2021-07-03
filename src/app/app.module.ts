@@ -13,6 +13,7 @@ import { SohailService } from './services/sohail.service';
 import { PDocParentComponent } from './p-doc-parent/p-doc-parent.component';
 import { PDocChildComponent } from './p-doc-parent/p-doc-child/p-doc-child.component';
 import { NgPracticeDemoService } from './services/ng-practice-demo.service';
+import { LifecyclhookComponent } from './lifecyclhook/lifecyclhook.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgPracticeDemoService } from './services/ng-practice-demo.service';
     EmployeeComponent,
     EmployeeidComponent,
     PDocParentComponent,
-    PDocChildComponent
+    PDocChildComponent,
+    LifecyclhookComponent
   ],
   imports: [
     BrowserModule,
