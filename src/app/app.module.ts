@@ -10,12 +10,17 @@ import { EmployeeService } from './services/employee.service';
 import { OutsideURLService } from './services/outsideURL.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SohailService } from './services/sohail.service';
+import { PDocParentComponent } from './p-doc-parent/p-doc-parent.component';
+import { PDocChildComponent } from './p-doc-parent/p-doc-child/p-doc-child.component';
+import { NgPracticeDemoService } from './services/ng-practice-demo.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    EmployeeidComponent
+    EmployeeidComponent,
+    PDocParentComponent,
+    PDocChildComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import { SohailService } from './services/sohail.service';
     LoginService,
     EmployeeService,
     OutsideURLService,
-    SohailService
+    SohailService,
+    NgPracticeDemoService
   ],
   bootstrap: [AppComponent]
 })

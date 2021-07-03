@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from './services/app.service';
 import { EmployeeService } from './services/employee.service';
+import { NgPracticeDemoService } from './services/ng-practice-demo.service';
 import { OutsideURLService } from './services/outsideURL.service';
 import { SohailService } from './services/sohail.service';
 
@@ -18,7 +19,7 @@ export class AppComponent {
 
 
   constructor(private router: Router, private lgnSrv: LoginService, private _empsrv: EmployeeService, private _outUrlsrv: OutsideURLService,
-    private sohailSrv: SohailService){
+    private sohailSrv: SohailService, private ngPracSrv: NgPracticeDemoService){
     //console.log(this.lgnSrv.getNameFromService());
     //this._empsrv = new EmployeeService();
     this.appName = this._empsrv.employeeName;
@@ -58,6 +59,11 @@ export class AppComponent {
         //complete fn
         () => {  console.log('completed') }
     );
+  }
+
+
+  getFromCustomAPI() {
+    this.ngPracSrv.getDataFromCustomAPI();
   }
 
 }

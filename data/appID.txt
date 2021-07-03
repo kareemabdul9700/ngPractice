@@ -1,0 +1,4 @@
+
+https://dummyapi.io/documentation/static-data-api
+
+app-id: 60dd1d1c8f58928d40533003
