@@ -10,11 +10,9 @@ export class NgPracticeDemoService {
   constructor(private httpclient: HttpClient) { }
 
   getDataFromCustomAPI() {
-    this.httpclient.get('https://localhost:44355/WeatherForecast').subscribe(
+    this.httpclient.get('https://localhost:44396/home').subscribe(
       (output) => console.log(output),
       (err) => console.log(err)
     )
   }
-
-
 }

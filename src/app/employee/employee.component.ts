@@ -13,6 +13,7 @@ export class EmployeeComponent implements OnInit {
 
   name: string = '';
   data: any = {};
+  usertext:string = 'kareem';
 
   constructor(private _ar: ActivatedRoute, private _lsrv: LoginService, private _empsrv: EmployeeService,
     private soharilSrv: SohailService) { 

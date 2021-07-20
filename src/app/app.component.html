@@ -1,6 +1,14 @@
+
+
+<div>
+  <h1>Web Whats app</h1>
+  <a href="https://api.whatsapp.com/send?text=www.google.com" data-text="Take a look at this awesome website:" 
+  class="wa_btn wa_btn_s" style="display:block">Share1</a>
+</div>
+<hr />
 <div>
   <ul>
-    <li>APP Component : <b>{{appName}}</b></li>
+    <li>APP Component : <b>{{appName | lowercase}}</b></li>
   </ul>
 </div>
 <button type="button" (click)="goToEmployee()">Go To Employee</button>
