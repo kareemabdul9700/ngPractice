@@ -27,7 +27,11 @@
 
 {{data | json}}
 
+<input type="text" name="testName" [(ngModel)]="tName" />
+
 <button type="button"(click)="getFromCustomAPI()">Custom API</button>
+
+<button type="button"(click)="saveItemDetails()">SaveItem</button>
 
 <app-p-doc-parent>
 </app-p-doc-parent>

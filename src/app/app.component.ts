@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ItemDetails } from './itemDetails.model';
 import { LoginService } from './services/app.service';
 import { EmployeeService } from './services/employee.service';
 import { NgPracticeDemoService } from './services/ng-practice-demo.service';
@@ -15,6 +16,7 @@ export class AppComponent {
   title = 'ngteaching';
   appName: string = '';
   data: any = {};
+  tName: string = '';
   //_empsrv: any;
 
 
@@ -63,7 +65,17 @@ export class AppComponent {
 
 
   getFromCustomAPI() {
-    this.ngPracSrv.getDataFromCustomAPI();
+    this.ngPracSrv.getDataFromCustomAPI(this.tName);
+  }
+
+  saveItemDetails() {
+
+    const itmDtls = new ItemDetails();
+    itmDtls.ItemName = 'Phone';
+    itmDtls.ItemAmount = 10;
+    itmDtls.ItemQuantity = 1;
+
+    this.ngPracSrv.saveItemDetails(itmDtls);
   }
 
 }

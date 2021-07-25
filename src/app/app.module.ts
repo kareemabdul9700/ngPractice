@@ -14,6 +14,7 @@ import { PDocParentComponent } from './p-doc-parent/p-doc-parent.component';
 import { PDocChildComponent } from './p-doc-parent/p-doc-child/p-doc-child.component';
 import { NgPracticeDemoService } from './services/ng-practice-demo.service';
 import { LifecyclhookComponent } from './lifecyclhook/lifecyclhook.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LifecyclhookComponent } from './lifecyclhook/lifecyclhook.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ 
     LoginService,
